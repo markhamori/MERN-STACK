@@ -1,4 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://hamorimark:test1234@cluster0.pycyk.mongodb.net/devconnector?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
-}
