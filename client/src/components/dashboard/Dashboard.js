@@ -1,23 +1,20 @@
 import React, { Fragment, useEffect } from "react";
-import { Link } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Spinner from "../layout/Spinner";
-import { DasboardActions } from "./DasboardActions";
+import DashboardActions from "./DashboardActions";
 import { getCurrentProfile } from "../../actions/profile";
 
 const Dashboard = ({
   getCurrentProfile,
   auth: { user },
-  profile: { profile, loading },
+  profile: { profile },
 }) => {
   useEffect(() => {
     getCurrentProfile();
   }, [getCurrentProfile]);
 
-  return loading && profile === null ? (
-    <Spinner />
-  ) : (
+  return (
     <Fragment>
       <h1 className="large text-primary">Dashboard</h1>
       <p className="lead">
@@ -25,7 +22,13 @@ const Dashboard = ({
       </p>
       {profile !== null ? (
         <Fragment>
-          <DasboardActions />
+          <DashboardActions />
+
+          <div className="my-2">
+            <button className="btn btn-danger">
+              <i className="fas fa-user-minus" /> Delete My Account
+            </button>
+          </div>
         </Fragment>
       ) : (
         <Fragment>
