@@ -5,7 +5,7 @@ import { GET_PROFILE, PROFILE_ERROR, UPDATE_PROFILE } from "./types";
 // Get current users profile
 export const getCurrentProfile = () => async (dispatch) => {
   try {
-    const res = await axios.get("/profile/me");
+    const res = await axios.get("/api/profile/me");
 
     dispatch({
       type: GET_PROFILE,
@@ -121,3 +121,6 @@ export const addEducation = (formData, history) => async (dispatch) => {
     });
   }
 };
+
+// Delete experience
+// export const deleteExperience = ()
