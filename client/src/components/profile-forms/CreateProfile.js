@@ -19,7 +19,7 @@ const initialState = {
   instagram: "",
 };
 
-const CreateProfile = ({ CreateProfile, history }) => {
+const CreateProfile = ({ createProfile, history }) => {
   const [formData, setFormData] = useState(initialState);
 
   const [displaySocialInputs, toggleSocialInputs] = useState(false);
