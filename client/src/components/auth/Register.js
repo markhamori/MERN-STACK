@@ -25,32 +25,9 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       setAlert("Passwords do not match", "danger");
     } else {
       register({ name, email, password });
-      // WE WANT TO DO THIS WITH REDUX, BECAUSE WE DO NOT WANT TO HANDLE THE STATES IN THE COMPONENT //
-      //   const newUser = {
-      //     name,
-      //     email,
-      //     password,
-      //   };
-
-      //   try {
-      //     const config = {
-      //       headers: {
-      //         "Content-Type": "application/json",
-      //       },
-      //     };
-
-      //     const body = JSON.stringify(newUser);
-
-      //     const res = await axios.post("/api/users", body, config);
-      //     console.log(res.data);
-      //   } catch (err) {
-      //     console.error(err.response.data);
-      //   }
-      // }
     }
   };
 
-  // Redirect if logged in
   if (isAuthenticated) {
     return <Redirect to="/dashboard" />;
   }
