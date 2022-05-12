@@ -1,7 +1,7 @@
 {
-  "name": "devconnector",
+  "name": "devzor",
   "version": "1.0.0",
-  "description": "Social network for developers",
+  "description": "Network for developers",
   "main": "server.js",
   "scripts": {
     "start": "node server",
