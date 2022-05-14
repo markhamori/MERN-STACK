@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://hamorimark:test1234@cluster0.pycyk.mongodb.net/devconnector?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken",
-  "githubClientId": "080a91f76f4a1f6348fc",
-  "githubSecret": "f39308d14d105899b0baf0a77702cb0f80181752"
-}
