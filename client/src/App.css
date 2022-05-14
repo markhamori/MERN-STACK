@@ -74,6 +74,18 @@ img {
 
 .text-primary {
   color: var(--primary-color);
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.text-secondary {
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+.text-title {
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 .text-dark {
@@ -124,12 +136,22 @@ img {
 }
 .my-1 {
   margin: 1rem 0;
+  font-weight: 100;
 }
 .my-2 {
   margin: 2rem 0;
 }
 .my-3 {
   margin: 3rem 0;
+}
+
+.mr-1 {
+  margin-right: 0.5rem;
+}
+
+.mx-2 {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
 }
 
 .parent {
@@ -214,9 +236,11 @@ img {
 .bg-primary,
 .badge-primary,
 .alert-primary {
-  background: var(--light-color);
+  background: #202024;
   color: #fff;
   border-radius: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .bg-navbar {
@@ -243,7 +267,12 @@ img {
 .bg-dark,
 .badge-dark,
 .alert-dark {
-  background: var(--dark-color);
+  background: rgb(46, 44, 44);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  border-radius: 5px;
   color: #fff;
 }
 
@@ -251,8 +280,8 @@ img {
 .bg-danger,
 .badge-danger,
 .alert-danger {
-  background: var(--danger-color);
-  color: #fff;
+  background: var(--primary-color);
+  color: #000;
 }
 
 .btn-success,
@@ -282,8 +311,17 @@ img {
 
 .round-img {
   border-radius: 50%;
+  padding: 5px;
   width: 125px;
   margin-left: 3.5vw;
+  border: 2px solid var(--primary-color);
+}
+
+.round-img-2 {
+  border-radius: 50%;
+  padding: 5px;
+  width: 125px;
+  border: 2px solid var(--primary-color);
 }
 
 .line {
@@ -462,12 +500,13 @@ button {
 }
 
 .profile-top .icons a {
+  font-size: 0.75rem;
   color: #fff;
-  margin: 0 0.3rem;
+  margin: 0 0.5rem;
 }
 
 .profile-top .icons a:hover {
-  color: var(--dark-color);
+  color: rgb(185, 183, 183);
 }
 
 .profile-about {
@@ -554,7 +593,7 @@ button {
 .post .comment-count {
   background: var(--light-color);
   color: var(--primary-color);
-  padding: 0.1rem 0.2rem;
+  padding: 0.1rem 0.5rem;
   border-radius: 5px;
   font-size: 0.8rem;
 }

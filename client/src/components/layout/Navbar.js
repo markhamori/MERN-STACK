@@ -5,25 +5,40 @@ import PropTypes from "prop-types";
 import { logout } from "../../actions/auth";
 import Logo from "../../img/icon.png";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faAddressCard,
+  faNewspaper,
+  faArrowRightToBracket,
+  faUserAstronaut,
+} from "@fortawesome/free-solid-svg-icons";
+
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to="/profiles">Developers</Link>
+        <Link to="/profiles">
+          Developers
+          <FontAwesomeIcon className="mx-2" icon={faUser} />
+        </Link>
       </li>
       <li>
-        <Link to="/posts">Posts</Link>
+        <Link to="/posts">
+          Posts
+          <FontAwesomeIcon className="mx-2" icon={faNewspaper} />
+        </Link>
       </li>
       <li>
         <Link to="/dashboard">
-          <i className="fas fa-user"></i>{" "}
           <span className="hide-sm">Dashboard</span>
+          <FontAwesomeIcon className="mx-2" icon={faAddressCard} />
         </Link>
       </li>
       <li>
         <a onClick={logout} href="#!">
-          <i className="fas fa-sign-out-alt"></i>{" "}
           <span className="hide-sm">Logout</span>
+          <FontAwesomeIcon className="mx-2" icon={faArrowRightToBracket} />
         </a>
       </li>
     </ul>
@@ -31,13 +46,22 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <Link to="/profiles">Developers</Link>
+        <Link to="/profiles">
+          Developers
+          <FontAwesomeIcon className="mx-2" icon={faUser} />
+        </Link>
       </li>
       <li>
-        <Link to="/register">Register</Link>
+        <Link to="/register">
+          Register
+          <FontAwesomeIcon className="mx-2" icon={faUserAstronaut} />
+        </Link>
       </li>
       <li>
-        <Link to="/login">Login</Link>
+        <Link to="/login">
+          Login
+          <FontAwesomeIcon className="mx-2" icon={faArrowRightToBracket} />
+        </Link>
       </li>
     </ul>
   );

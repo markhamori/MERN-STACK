@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTerminal } from "@fortawesome/free-solid-svg-icons";
+
 const ProfileItem = ({
   profile: {
     user: { _id, name, avatar },
@@ -26,8 +29,9 @@ const ProfileItem = ({
       </div>
       <ul>
         {skills.slice(0, 4).map((skill, index) => (
-          <li key={index} className="text-primary">
-            <i className="fas fa-check"></i> {skill}
+          <li key={index} className="text-secondary">
+            <FontAwesomeIcon className="mx-2" icon={faTerminal} />
+            {skill}
           </li>
         ))}
       </ul>
