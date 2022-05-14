@@ -4,7 +4,7 @@
 :root {
   --primary-color: #f90059;
   --dark-color: #343a40;
-  --light-color: #313133;
+  --light-color: #202024;
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
@@ -21,6 +21,10 @@ body {
   line-height: 1.6;
   background-color: #18181b;
   color: #fff;
+}
+
+span {
+  font-weight: 200;
 }
 
 a {
@@ -222,7 +226,7 @@ img {
 
 .btn-secondary {
   background: var(--primary-color);
-  color: #fff;
+  color: #000;
   border-radius: 5px;
 }
 
@@ -272,13 +276,14 @@ img {
   opacity: 0.8;
 }
 
-.bg-light,
 .badge-light {
   border: #ccc solid 1px;
 }
 
 .round-img {
   border-radius: 50%;
+  width: 125px;
+  margin-left: 3.5vw;
 }
 
 .line {
@@ -318,9 +323,11 @@ img {
   color: #fff;
   display: block;
   width: 100%;
-  padding: 0.4rem;
-  font-size: 1.2rem;
-  border: 1px solid #ccc;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
 
 .form input[type="submit"],
